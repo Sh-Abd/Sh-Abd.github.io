@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadi Abd El Majid| Official Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f5f2;
+            color: #333;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .film-card:hover .film-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .film-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #c9a16e;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .award-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .award-card:hover .award-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold playfair text-gray-800">SHADI A. ELMAJID</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900">About</a>
+                    <a href="#Projects" class="nav-link text-gray-700 hover:text-gray-900">Projects</a>
+                    <a href="#awards" class="nav-link text-gray-700 hover:text-gray-900">Experiences</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+        <img src="photoes/wallpapersden.com_programming-coding-language_1920x1080.jpg" alt="Taraji P. Henson" class="absolute w-full h-full object-cover opacity-70">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold playfair text-white mb-6">SHADI  A. ELMAJID</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">MS.Software Engieer</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#Experiences" class="px-8 py-3 bg-transparent border-2 border-gold-500 text-white hover:bg-gold-500 hover:text-white transition duration-300">View Work</a>
+                <a href="#about" class="px-8 py-3 bg-gold-500 text-white hover:bg-gold-600 transition duration-300">Learn More</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="photoes/Screenshot 2025-04-08 at 11.42.28 AM.png" alt="Taraji P. Henson portrait" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl playfair font-bold text-gray-800 mb-6">About SHADI</h2>
+                    <p class="text-gray-600 mb-4">I’m a recent Master’s graduate in Software Engineering from San Jose State University with a 3.8 GPA, passionate about building scalable, secure, and efficient systems. I’ve worked across the full stack using technologies like Spring Boot, Python, Docker, and AWS.</p>
+                    <p class="text-gray-600 mb-4">My hands on projects include a Dockerized hospital appointment system, a deep learning based fatigue detection app, and secure enterprise deployments with OpenVPN and NGINX. I enjoy solving real world problems through clean code and thoughtful architecture.</p>
+                    <p class="text-gray-600 mb-6">Outside of tech, I’ve balanced a full-time weekend job while funding my education independently. I love diving into projects involving embedded systems, vehicle control, and cybersecurity always looking for the next challenge to grow and contribute.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/shadi-abd-el-majid-3227381aa/" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Sh-Abd" class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">
+                            <i class="fab fa-github mr-2"></i> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Films Section -->
+    <section id="Projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl playfair font-bold text-center text-gray-800 mb-16">Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects 1 -->
+                <a href="https://github.com/Sh-Abd/Uclimate" target="_blank">
+                    <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                        <img src="photoes/istockphoto-1443280642-612x612.jpg" alt="Hidden Figures" class="w-full h-64 object-cover">
+                        <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl playfair font-bold text-white mb-2">Uclimate</h3>
+                            <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                            <p class="text-white mb-4">Real time data on the current weather conditions along with route directions.</p>
+                            <div class="flex items-center text-yellow-400">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Projects 2 -->
+                <a href="https://github.com/tayadeabhilash/Smart-Road-Service-Platform" target="_blank">
+                <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="photoes/Screenshot 2025-04-10 at 12.13.27 PM.png" alt="Empire" class="w-full h-64 object-cover">
+                    <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl playfair font-bold text-white mb-2">Smart Road Service</h3>
+                        <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                        <p class="text-white mb-4">Road services offer critical support for drivers and operators, delivering timely and efficient help when unforeseen issues arise.</p>
+                        <div class="flex items-center text-yellow-400">
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <!-- Projects 3 -->
+                <a href="https://github.com/SayaliVB/Stock_Portfolio_Suggestion_Engine" target="_blank">
+                <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="photoes/Screenshot 2025-04-10 at 12.21.19 PM.png" alt="Benjamin Button" class="w-full h-64 object-cover">
+                    <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl playfair font-bold text-white mb-2">Stock Portfolio</h3>
+                        <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                        <p class="text-white mb-4">An application that tracks the stock market on real time and give recommendations.</p>
+                        <div class="flex items-center text-yellow-400">
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+                <!-- Projects 4 -->
+                <a href="https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-2024spring_sparkle" target="_blank">
+                <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="photoes/47936d89f19ea8dceff59d703e656a73.jpg" alt="Hustle & Flow" class="w-full h-64 object-cover">
+                    <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl playfair font-bold text-white mb-2">Canvas Applicatin</h3>
+                        <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                        <p class="text-white mb-4">Developing APIs and models for managing grades, announcements, and student data. Implementing tests to ensure the functionality of these APIs.</p>
+                        <div class="flex items-center text-yellow-400">
+                        </div>
+                    </div>
+                </div>
+            </a>
+                
+                <!-- Projects 5 -->
+                <a href="https://github.com/Sh-Abd/SnakeGame" target="_blank">
+                <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="photoes/a-flat-design-icon-of-snake-game-vector.jpg" alt="Person of Interest" class="w-full h-64 object-cover">
+                    <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl playfair font-bold text-white mb-2">Snake Game</h3>
+                        <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                        <p class="text-white mb-4">Classic snake game made in Python for in my free time.</p>
+                        <div class="flex items-center text-yellow-400">
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <!-- Projects 6 -->
+                <a href="https://github.com/ThongN2/Test-automation" target="_blank">
+                    <div class="film-card relative rounded-lg overflow-hidden shadow-lg">
+                    <img src="photoes/Screenshot 2025-04-10 at 12.36.19 PM.png" alt="Acrimony" class="w-full h-64 object-cover">
+                    <div class="film-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl playfair font-bold text-white mb-2">Test Automation</h3>
+                        <p class="text-gray-300 mb-4">Shadi Abd El Majid</p>
+                        <p class="text-white mb-4">An applciation for test automation which test multiple applications accuracy and efficacy.</p>
+                        <div class="flex items-center text-yellow-400">
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl playfair font-bold text-center text-gray-800 mb-16">Academics</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Award 1 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-yellow-100 text-yellow-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-school text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">Undergraduate<br>  San Jose State Univerity</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">2018 - 2023</p>
+                    <p class="text-gray-700">Bachelor of Software Engineering GPA: 3.5/4</p>
+                </div>
+                
+                <!-- Award 2 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">graduate<br>  San Jose State Univerity</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">2023 - 2025</p>
+                    <p class="text-gray-700">Masters of Software Engineering GPA: 3.9/4 </p>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+ <!-- Experiences Section -->
+ <section id="Experiences" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl playfair font-bold text-center text-gray-800 mb-16">Experiences</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Experiences 1 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-purple-100 text-purple-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">Elements Medical Technology</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">May 2024- October 2024</p>
+                    <p class="text-gray-700">Test Quality Morgan Hill, CA </p>
+                </div>
+                
+                <!-- Experiences 2 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-red-100 text-red-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-film text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">Slac</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">May 2023- December 2023</p>
+                    <p class="text-gray-700"> Software Developer Stanford, CA</p>
+                </div>
+                
+                <!-- Experiences 3 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-green-100 text-green-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-car text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">Formula Electric manufacture</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">January 2020 - December 2022</p>
+                    <p class="text-gray-700">Software Engineering, San Jose State University</p>
+                </div>
+                
+                <!-- Experiences 4 -->
+                <div class="award-card bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="award-icon bg-pink-100 text-pink-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-chalkboard-user text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl playfair font-bold">Frog Tutor</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">March 2021 - December 2022</p>
+                    <p class="text-gray-700">Software Engineer Tutor, Palo Alto, CA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl playfair font-bold text-center mb-16">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl playfair font-bold mb-6">Representation</h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-2">Personal Portfolio</h4>
+                        <p class="text-gray-300">SHADI ABD EL MAJID</p>
+                        <p class="text-gray-300">San Jose, CA 95130</p>
+                        <p class="text-gray-300">Phone: (408) 370-8866</p>
+                    </div>
+                    
+
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/shadielmajid/" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shadi-abd-el-majid-3227381aa/" class="bg-blue-600 text-white p-3 rounded-full hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:shadi.abdelmajid@sjsu.edu?subject=Hello Shadi&body=I saw your portfolio and wanted to reach out!" class="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-solid fa-g text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form action="https://formspree.io/f/mldjaawj" method="POST" class="space-y-6">
+                      <div>
+                        <label for="name" class="block text-sm font-medium mb-1 text-white">Full Name</label>
+                        <input type="text" name="name" id="name" required
+                          class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white">
+                      </div>
+                  
+                      <div>
+                        <label for="email" class="block text-sm font-medium mb-1 text-white">Email Address</label>
+                        <input type="email" name="email" id="email" required
+                          class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white">
+                      </div>
+                  
+                      <div>
+                        <label for="subject" class="block text-sm font-medium mb-1 text-white">Subject</label>
+                        <input type="text" name="subject" id="subject" required
+                          class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white">
+                      </div>
+                  
+                      <div>
+                        <label for="message" class="block text-sm font-medium mb-1 text-white">Message</label>
+                        <textarea name="message" id="message" rows="4" required
+                          class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white"></textarea>
+                      </div>
+                  
+                      <!-- Optional: Customize subject in email you receive -->
+                      <input type="hidden" name="_subject" value="New message from portfolio site">
+                  
+                      <button type="submit"
+                        class="px-6 py-3 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">
+                        Send Message
+                      </button>
+                    </form>
+                  </div>
+                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl playfair font-bold">SHADI  A. ELMAJID</h3>
+                    <p class="text-gray-400 mt-2">Ms.Software Engnieering</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-imdb"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© SHADI  A. ELMAJID.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+ 
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        mobileMenuButton.addEventListener('click', function() {
+            // This would toggle a mobile menu
+            alert('Mobile menu would open here in a full implementation');
+        });
+    </script>
+</html>
